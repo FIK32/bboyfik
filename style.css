@@ -1177,3 +1177,134 @@ body::before {
     transform: none;
   }
 }
+
+/* BBOYFIK — Mobile Design Upgrade */
+
+/* Keep content within the screen */
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  overflow-x: clip;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablets and phones */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 9vw, 4.2rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .hero .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Comfortable buttons on touchscreens */
+  .button {
+    min-height: 46px;
+    padding: 12px 18px;
+  }
+
+  /* Cards fit smaller screens */
+  article {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  article h3 {
+    line-height: 1.3;
+  }
+
+  article p {
+    line-height: 1.7;
+  }
+
+  /* Contact section */
+  #contact {
+    padding: 26px 20px;
+    overflow-wrap: anywhere;
+  }
+
+  #contact a.button {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  /* Prevent long text and links from overflowing */
+  p,
+  h1,
+  h2,
+  h3,
+  a {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero {
+    padding-top: 56px;
+    padding-bottom: 52px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+
+  .hero .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #contact a.button {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .tags span {
+    margin-bottom: 6px;
+  }
+}
+
+/* Reduce unnecessary movement for visitors who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
