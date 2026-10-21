@@ -1308,3 +1308,80 @@ img {
     scroll-behavior: auto !important;
   }
 }
+
+/* BBOYFIK — Premium Navigation Upgrade */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(9, 9, 15, 0.82);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo span {
+  color: #a78bfa;
+}
+
+.logo i {
+  color: #67e8f9;
+  font-style: normal;
+}
+
+/* Navigation links */
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 5px;
+  border-radius: 5px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .nav {
+    gap: 14px;
+    min-height: 68px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .logo {
+    transition: none;
+  }
+
+  .logo:hover {
+    transform: none;
+  }
+}
