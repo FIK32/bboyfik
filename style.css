@@ -951,3 +951,86 @@ button:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* BBOYFIK — Impressive Homepage Upgrade */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding-top: clamp(80px, 12vw, 150px);
+  padding-bottom: clamp(80px, 12vw, 150px);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 8%;
+  left: 5%;
+  width: min(65vw, 500px);
+  aspect-ratio: 1;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.22),
+    rgba(59, 130, 246, 0.08) 45%,
+    transparent 72%
+  );
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .eyebrow {
+  letter-spacing: 0.16em;
+  line-height: 1.8;
+  color: #c4b5fd;
+}
+
+.hero h1 {
+  max-width: 900px;
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.hero h1 strong,
+.hero h1 span {
+  background: linear-gradient(
+    100deg,
+    #c4b5fd,
+    #818cf8,
+    #67e8f9
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 620px;
+  line-height: 1.85;
+  color: #b8b8ca;
+}
+
+.hero .button {
+  min-height: 48px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .hero h1 {
+    letter-spacing: -0.035em;
+  }
+}
