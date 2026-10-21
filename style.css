@@ -1091,3 +1091,89 @@ body::before {
     animation: none;
   }
 }
+
+/* BBOYFIK — Premium Contact Section */
+
+#contact {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(32px, 6vw, 72px);
+  margin-top: 48px;
+  margin-bottom: 48px;
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(124, 58, 237, 0.16),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(25, 24, 40, 0.96),
+      rgba(12, 12, 20, 0.96)
+    );
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+}
+
+#contact h2 {
+  color: #ffffff;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+#contact p {
+  color: #c0bfd0;
+  line-height: 1.8;
+}
+
+#contact a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 13px 21px;
+  margin: 8px 8px 0 0;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+#contact a.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
+}
+
+#contact a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  #contact {
+    padding: 26px 20px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    border-radius: 18px;
+  }
+
+  #contact a.button {
+    margin-right: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #contact a.button {
+    transition: none;
+  }
+
+  #contact a.button:hover {
+    transform: none;
+  }
+}
