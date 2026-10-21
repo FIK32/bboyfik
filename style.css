@@ -1034,3 +1034,60 @@ button:focus-visible {
     letter-spacing: -0.035em;
   }
 }
+
+/* BBOYFIK — Premium Animated Background */
+
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -35%;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 20% 25%,
+      rgba(124, 58, 237, 0.22),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(59, 130, 246, 0.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 55% 80%,
+      rgba(168, 85, 247, 0.13),
+      transparent 32%
+    );
+
+  background-size: 160% 160%;
+  background-position: 0% 0%;
+  animation: bboyfikAurora 24s ease-in-out infinite alternate;
+}
+
+@keyframes bboyfikAurora {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 45%;
+  }
+
+  100% {
+    background-position: 30% 100%;
+  }
+}
+
+/* Respect visitors who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
